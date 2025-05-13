@@ -7,7 +7,36 @@
   </head>
   <body>
     <div class="container">
-    
+      <form action="#" novalidate>
+        <p>
+          <label for="mail">
+            <span>Enter email address</span>
+            <input type="email" name="mail" id="mail" required>
+            <span class="error" aria-live="polite"></span>
+          </label>
+          <label for="country">
+            <span>Enter country</span>
+            <input type="text" name="country" id="country" required>
+            <span class="error" aria-live="polite"></span>
+          </label>
+          <label for="postcode">
+            <span>Enter postcode</span>
+            <input type="text" name="postcode" id="postcode" required>
+            <span class="error" aria-live="polite"></span>
+          </label>
+          <label for="password">
+            <span>Enter password</span>
+            <input type="password" name="password" id="password" required>
+            <span class="error" aria-live="polite"></span>
+          </label>
+          <label for="passwordConfirm">
+            <span>Confirm password</span>
+            <input type="password" name="passwordConfirm" id="passwordConfirm" required>
+            <span class="error" aria-live="polite"></span>
+          </label>
+        </p>
+        <button>Submit</button>
+      </form>
     </div>
   </body>
 </html>
