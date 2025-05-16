@@ -27,3 +27,7 @@ function checkPostcode(postCode) {
     const result = constraint.test(postCode)
     return result;
 }
+
+function showError(error) {
+    
+}
