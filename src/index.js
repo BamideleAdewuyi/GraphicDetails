@@ -36,6 +36,10 @@ function checkPasswordConfirm(passwordConfirm) {
     return result;
 }
 
+function checkForm(form) {
+    
+}
+
 function showError(error) {
     const errors = {
         "invalidPostcode": "Enter a valid postcode.",
