@@ -30,7 +30,9 @@ function checkPostcode(postCode) {
 }
 
 function checkEmail(email) {
-    
+    const constraint = new RegExp('(([^<>()[\\]\\.,;:\\s@"]+(\\.[^<>()[\\]\\.,;:\\s@"]+)*)|.(".+"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))')
+    const result = constraint.test(email);
+    return result;
 }
 
 function showError(error) {
