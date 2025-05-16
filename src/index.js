@@ -47,6 +47,7 @@ function showError(error) {
     return errors[error];
 }
 
+// Event handling
 postcode.addEventListener("input", (e) => {
     if (checkPostcode(postcode.value)) {
         postcodeError.textContent = ""
@@ -62,3 +63,11 @@ email.addEventListener("input", (e) => {
         emailError.textContent = showError("invalidEmail");
     }
 });
+
+password.addEventListener("input", (e) => {
+    if (checkPassword(password.value)) {
+        passwordError.textContent = ""
+    } else {
+        passwordError.textContent = "Password must have at least eight characters, with at least one letter, one number and one special character"
+    }
+})
