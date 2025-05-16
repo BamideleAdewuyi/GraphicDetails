@@ -19,6 +19,7 @@ const passwordConfirmError = document.querySelector("#passwordConfirm + span.err
 // password, email: too short
 // password confirm: does not match
 
+// Checking functions
 function checkPostcode(postCode) {
     const constraint = new RegExp("([Gg][Ii][Rr] 0[Aa]{2})|((([A-Za-z][0-9]{1,2})|(([A-Za-z][A-Ha-hJ-Yj-y][0-9]{1,2})|(([A-Za-z][0-9][A-Za-z])|([A-Za-z][A-Ha-hJ-Yj-y][0-9][A-Za-z]?))))\\s?[0-9][A-Za-z]{2})")
 
@@ -26,6 +27,10 @@ function checkPostcode(postCode) {
 
     const result = constraint.test(postCode)
     return result;
+}
+
+function checkEmail(email) {
+    
 }
 
 function showError(error) {
