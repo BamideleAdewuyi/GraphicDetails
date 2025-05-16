@@ -29,5 +29,9 @@ function checkPostcode(postCode) {
 }
 
 function showError(error) {
-    
+    const errors = {
+        "invalidPostcode": "Enter a valid postcode."
+    }
+
+    return errors[error];
 }
