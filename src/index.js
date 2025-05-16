@@ -30,7 +30,8 @@ function checkPostcode(postCode) {
 
 function showError(error) {
     const errors = {
-        "invalidPostcode": "Enter a valid postcode."
+        "invalidPostcode": "Enter a valid postcode.",
+        "invalidEmail" : "Enter a valid email"
     }
 
     return errors[error];
