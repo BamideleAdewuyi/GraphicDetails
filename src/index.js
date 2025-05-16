@@ -44,16 +44,6 @@ function checkPasswordConfirm(passwordConfirm) {
   return result;
 }
 
-function checkForm(form) {
-  for (const input of form) {
-    if (input.validity.valueMissing) {
-      console.log(input);
-      return [false, input];
-    }
-  }
-  return;
-}
-
 function showError(error) {
   const errors = {
     invalidPostcode: "Enter a valid postcode.",
