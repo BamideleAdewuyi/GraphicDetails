@@ -37,7 +37,12 @@ function checkPasswordConfirm(passwordConfirm) {
 }
 
 function checkForm(form) {
-    
+    for (const input of form) {
+        if (input.validity.valueMissing) {
+            return [false, input]
+        }
+    }
+    return;
 }
 
 function showError(error) {
