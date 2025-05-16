@@ -75,3 +75,11 @@ password.addEventListener("input", (e) => {
         passwordError.textContent = "Password must have at least eight characters, with at least one letter, one number and one special character"
     }
 })
+
+passwordConfirm.addEventListener("input", (e) => {
+    if (checkPasswordConfirm(passwordConfirm.value)) {
+        passwordConfirmError.textContent = "";
+    } else {
+        passwordConfirmError.textContent = "Does not match password"
+    }
+})
