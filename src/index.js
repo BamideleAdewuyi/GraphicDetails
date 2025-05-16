@@ -51,3 +51,11 @@ postcode.addEventListener("input", (e) => {
         postcodeError.textContent = showError("invalidPostcode")
     }
 })
+
+email.addEventListener("input", (e) => {
+    if (checkEmail(email.value)) {
+        emailError.textContent= "";
+    } else {
+        emailError.textContent = showError("invalidEmail");
+    }
+});
