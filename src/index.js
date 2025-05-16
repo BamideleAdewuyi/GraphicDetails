@@ -39,6 +39,7 @@ function checkPasswordConfirm(passwordConfirm) {
 function checkForm(form) {
     for (const input of form) {
         if (input.validity.valueMissing) {
+            console.log(input)
             return [false, input]
         }
     }
@@ -85,5 +86,53 @@ passwordConfirm.addEventListener("input", (e) => {
         passwordConfirmError.textContent = "";
     } else {
         passwordConfirmError.textContent = "Does not match password"
+    }
+})
+
+form.addEventListener("submit", (e) => {
+    if (checkEmail(email.value)) {
+            emailError.textContent= "";
+        } else {
+            emailError.textContent = showError("invalidEmail");
+            e.preventDefault();
+        }
+    if (checkPostcode(postcode.value)) {
+        postcodeError.textContent = ""
+    } else {
+        postcodeError.textContent = showError("invalidPostcode");
+        e.preventDefault();
+    }
+    if (checkPassword(password.value)) {
+            passwordError.textContent = ""
+        } else {
+            passwordError.textContent = "Password must have at least eight characters, with at least one letter, one number and one special character"
+            e.preventDefault();
+        }
+    if (checkPasswordConfirm(passwordConfirm.value)) {
+            passwordConfirmError.textContent = "";
+        } else {
+            passwordConfirmError.textContent = "Does not match password"
+            e.preventDefault();
+        }
+    if (email.validity.valueMissing) {
+        emailError.textContent = showError("valueMissing");
+    }
+
+    if (country.validity.valueMissing) {
+        countryError.textContent = showError("valueMissing");
+    } else {
+        countryError.textContent = ""
+    }
+
+    if (postcode.validity.valueMissing) {
+        postcodeError.textContent = showError("valueMissing");
+    }
+
+    if (password.validity.valueMissing) {
+        passwordError.textContent = showError("valueMissing");
+    }
+
+    if (passwordConfirm.validity.valueMissing) {
+        passwordConfirmError.textContent = showError("valueMissing");
     }
 })
