@@ -35,3 +35,11 @@ function showError(error) {
 
     return errors[error];
 }
+
+postcode.addEventListener("input", (e) => {
+    if (checkPostcode(postcode.value)) {
+        postcodeError.textContent = ""
+    } else {
+        postcodeError.textContent = showError("invalidPostcode")
+    }
+})
