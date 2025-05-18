@@ -50,7 +50,7 @@ function showError(error) {
 }
 
 // Event handling
-postcode.addEventListener("input", (e) => {
+postcode.addEventListener("input", () => {
   if (checkPostcode(postcode.value)) {
     postcodeError.textContent = "";
   } else {
@@ -58,7 +58,7 @@ postcode.addEventListener("input", (e) => {
   }
 });
 
-email.addEventListener("input", (e) => {
+email.addEventListener("input", () => {
   if (checkEmail(email.value)) {
     emailError.textContent = "";
   } else {
@@ -66,7 +66,7 @@ email.addEventListener("input", (e) => {
   }
 });
 
-password.addEventListener("input", (e) => {
+password.addEventListener("input", () => {
   if (checkPassword(password.value)) {
     passwordError.textContent = "";
   } else {
@@ -75,7 +75,7 @@ password.addEventListener("input", (e) => {
   }
 });
 
-passwordConfirm.addEventListener("input", (e) => {
+passwordConfirm.addEventListener("input", () => {
   if (checkPasswordConfirm(passwordConfirm.value)) {
     passwordConfirmError.textContent = "";
   } else {
