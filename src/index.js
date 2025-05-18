@@ -49,10 +49,6 @@ function showError(error) {
   return errors[error];
 }
 
-function checkFunction() {
-  
-}
-
 // Event handling
 postcode.addEventListener("input", (e) => {
   if (checkPostcode(postcode.value)) {
