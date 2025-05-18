@@ -18,24 +18,21 @@ function checkPostcode(postcode) {
   const constraint = new RegExp(
     "([Gg][Ii][Rr] 0[Aa]{2})|((([A-Za-z][0-9]{1,2})|(([A-Za-z][A-Ha-hJ-Yj-y][0-9]{1,2})|(([A-Za-z][0-9][A-Za-z])|([A-Za-z][A-Ha-hJ-Yj-y][0-9][A-Za-z]?))))\\s?[0-9][A-Za-z]{2})",
   );
-  const result = constraint.test(postcode);
-  return result;
+  return constraint.test(postcode);;
 }
 
 function checkEmail(email) {
   const constraint = new RegExp(
     '(([^<>()[\\]\\.,;:\\s@"]+(\\.[^<>()[\\]\\.,;:\\s@"]+)*)|.(".+"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))',
   );
-  const result = constraint.test(email);
-  return result;
+  return constraint.test(email);;
 }
 
 function checkPassword(password) {
   const constraint = new RegExp(
     "^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{8,}$",
   );
-  const result = constraint.test(password);
-  return result;
+  return constraint.test(password);
 }
 
 function checkPasswordConfirm(passwordConfirm) {
