@@ -36,9 +36,7 @@ function checkPassword(password) {
 }
 
 function checkPasswordConfirm(passwordConfirm) {
-  const password = document.getElementById("password").value;
-  const result = passwordConfirm == password;
-  return result;
+  return passwordConfirm === password.value;
 }
 
 function showError(error) {
