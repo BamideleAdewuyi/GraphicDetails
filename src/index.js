@@ -35,8 +35,8 @@ function checkPassword(password) {
   return constraint.test(password);
 }
 
-function checkPasswordConfirm(passwordConfirm) {
-  return passwordConfirm === password.value;
+function checkPasswordConfirm(passwordConfirm, password) {
+  return passwordConfirm === password;
 }
 
 function showError(error) {
@@ -76,7 +76,7 @@ password.addEventListener("input", () => {
 });
 
 passwordConfirm.addEventListener("input", () => {
-  if (checkPasswordConfirm(passwordConfirm.value)) {
+  if (checkPasswordConfirm(passwordConfirm.value, password.value)) {
     passwordConfirmError.textContent = "";
   } else {
     passwordConfirmError.textContent = "Does not match password";
@@ -103,7 +103,7 @@ form.addEventListener("submit", (e) => {
       "Password must have at least eight characters, with at least one letter, one number and one special character";
     e.preventDefault();
   }
-  if (checkPasswordConfirm(passwordConfirm.value)) {
+  if (checkPasswordConfirm(passwordConfirm.value, password.value)) {
     passwordConfirmError.textContent = "";
   } else {
     passwordConfirmError.textContent = "Does not match password";
